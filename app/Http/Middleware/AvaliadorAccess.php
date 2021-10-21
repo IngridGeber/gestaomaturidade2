@@ -17,7 +17,7 @@ class AvaliadorAccess
     public function handle(Request $request, Closure $next)
     {
         //checa se está autenticado e autorizado
-        if(auth()->check() && auth()->user()->id_permissao_fk != 1){
+        if(auth()->check() && auth()->user()->id_permissao_fk != 1 && auth()->user()->status == 'actived'){
             return $next($request);
         }
 
