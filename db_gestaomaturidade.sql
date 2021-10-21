@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 19-Out-2021 às 18:02
+-- Tempo de geração: 21-Out-2021 às 16:17
 -- Versão do servidor: 10.4.19-MariaDB
 -- versão do PHP: 7.3.28
 
@@ -290,7 +290,10 @@ INSERT INTO `tb_diagnostico_bodies` (`id`, `id_diagnostico_header_fk`, `id_pergu
 (24, 8, 2, 1, '2021-10-19 19:23:59', '2021-10-19 19:23:59'),
 (25, 9, 1, 6, '2021-10-19 19:46:29', '2021-10-19 19:46:29'),
 (26, 9, 3, 9, '2021-10-19 19:46:29', '2021-10-19 19:46:29'),
-(27, 9, 2, 1, '2021-10-19 19:46:29', '2021-10-19 19:46:29');
+(27, 9, 2, 1, '2021-10-19 19:46:29', '2021-10-19 19:46:29'),
+(28, 10, 1, 5, '2021-10-21 18:10:14', '2021-10-21 18:10:14'),
+(29, 10, 3, 8, '2021-10-21 18:10:14', '2021-10-21 18:10:14'),
+(30, 10, 2, 2, '2021-10-21 18:10:14', '2021-10-21 18:10:14');
 
 -- --------------------------------------------------------
 
@@ -322,7 +325,8 @@ INSERT INTO `tb_diagnostico_headers` (`id`, `id_unidade_fk`, `id_modelo_header_f
 (6, 1, 1, 0, '0.00', 1, '2021-10-19 18:58:10', '2021-10-19 18:58:10'),
 (7, 1, 1, 3, '50.00', 1, '2021-10-19 19:03:44', '2021-10-19 19:03:44'),
 (8, 1, 1, 1, '16.67', 1, '2021-10-19 19:23:59', '2021-10-19 19:23:59'),
-(9, 1, 1, 4, '66.67', 2, '2021-10-19 19:46:29', '2021-10-19 19:46:29');
+(9, 1, 1, 4, '66.67', 2, '2021-10-19 19:46:29', '2021-10-19 19:46:29'),
+(10, 1, 1, 3, '50.00', 2, '2021-10-21 18:10:14', '2021-10-21 18:10:14');
 
 -- --------------------------------------------------------
 
@@ -408,7 +412,8 @@ INSERT INTO `tb_nivel_areas` (`id`, `id_unidade_fk`, `id_area_fk`, `valor_nivel_
 (6, 1, 1, '0.00', '2021-10-19 18:58:10', '2021-10-19 18:58:10'),
 (7, 1, 1, '16.67', '2021-10-19 19:03:44', '2021-10-19 19:03:44'),
 (8, 1, 1, '5.56', '2021-10-19 19:23:59', '2021-10-19 19:23:59'),
-(9, 1, 1, '22.22', '2021-10-19 19:46:29', '2021-10-19 19:46:29');
+(9, 1, 1, '22.22', '2021-10-19 19:46:29', '2021-10-19 19:46:29'),
+(10, 1, 1, '16.67', '2021-10-21 18:10:14', '2021-10-21 18:10:14');
 
 -- --------------------------------------------------------
 
@@ -952,13 +957,13 @@ ALTER TABLE `tb_atividades`
 -- AUTO_INCREMENT de tabela `tb_diagnostico_bodies`
 --
 ALTER TABLE `tb_diagnostico_bodies`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT de tabela `tb_diagnostico_headers`
 --
 ALTER TABLE `tb_diagnostico_headers`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de tabela `tb_modelo_bodies`
@@ -976,7 +981,7 @@ ALTER TABLE `tb_modelo_headers`
 -- AUTO_INCREMENT de tabela `tb_nivel_areas`
 --
 ALTER TABLE `tb_nivel_areas`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de tabela `tb_nivel_maturidades`
