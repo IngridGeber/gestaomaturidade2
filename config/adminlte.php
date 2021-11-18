@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'Login - in | Gestão de Maturidade',
+    'title' => 'Índice de Maturidade da Gestão',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b> Gestão de Maturidade',
+    'logo' => 'Índice de Gestão de Maturidade',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.pn',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,

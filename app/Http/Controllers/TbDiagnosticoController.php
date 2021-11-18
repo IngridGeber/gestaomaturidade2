@@ -56,6 +56,7 @@ class TbDiagnosticoController extends Controller {
 
 
         $unidade = tb_unidade::findOrFail($id_unidade);
+        $usuario = \App\Models\User::findOrFail($usuario);
 
         if ($permissao=='unidade'){
             $sql="SELECT a.id,'".$unidade->nome."' as unidade, c.nome as area, d.nome as subarea, a.nivel_maturidade, DATE_FORMAT(a.created_at,'%d/%m/%Y') as data

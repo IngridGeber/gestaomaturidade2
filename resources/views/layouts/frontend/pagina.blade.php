@@ -13,8 +13,8 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('img/favicon.ico')}}"/>
 
-    @include('layouts.frontend.adicionacss')
-    @include('layouts.frontend.adicionajs')
+    @include('layouts.adicionacss')
+    @include('layouts.adicionajs')
 
 
 </head>
@@ -23,7 +23,7 @@
 
 <div class="wrapper">
     <div class="cols-md-12">
-        @include('layouts.frontend.cabecalho')
+        @include('layouts.cabecalho')
     </div>
 
     <div>
@@ -40,7 +40,7 @@
 
     <!--
     <div class="footer">
-        @include('layouts.frontend.footer')
+        @include('layouts.footer')
     </div>
     -->
 </div>

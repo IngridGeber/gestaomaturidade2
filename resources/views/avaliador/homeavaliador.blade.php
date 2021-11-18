@@ -103,7 +103,7 @@
                                 <input type="radio" name="subareas" id="{{'id_subareas_fk_'.$subarea->id}}" class="subareas" value="{{$subarea->id}}" >
                                 <div>
                                     <label for={{'id_subareas_fk_'.$subarea->id}}>
-                                        <img src="{{ asset('storage/imagens/'.$subarea->imagem)}}" width="60" height="60" >
+                                        <img src="{{ asset('/img/'.$subarea->imagem)}}" width="60" height="60" >
                                     </label>
                                 </div>
                                 <div>

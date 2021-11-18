@@ -18,15 +18,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('logout', [App\Http\Controllers\Auth\LoginController::class,'logout']);
+
 Auth::routes();
 
 Route::middleware(['admin','verified'])->group(function () {
-    Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('admin', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
 });
 
 Route::middleware(['avaliador','verified'])->group(function () {
-    Route::get('homeavaliador', [App\Http\Controllers\HomeController::class, 'indexAvaliador'])->name('homeavaliador');
+    Route::get('avaliador', [App\Http\Controllers\HomeController::class, 'indexAvaliador'])->name('homeavaliador');
     Route::post('/diagnostico/exibirPerguntas', [App\Http\Controllers\TbDiagnosticoController::class, 'exibirPerguntas'])->name('exibirPerguntas');
     Route::get('/diagnostico/showIndices/{id_unidade}', [App\Http\Controllers\TbDiagnosticoController::class, 'showIndices'])->name('showIndices');
     Route::get('/diagnostico/showIndicesSubAreas/{id_unidade}/{id_area}', [App\Http\Controllers\TbDiagnosticoController::class, 'showIndicesSubAreas'])->name('showIndicesSubAreas');

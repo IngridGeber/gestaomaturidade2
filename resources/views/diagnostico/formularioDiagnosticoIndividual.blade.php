@@ -15,7 +15,7 @@
 <div class="form-group col-sm-12 col-md-12 col-lg-12 text-center" id="divArea">
     @include('layouts.frontend.cabecalho_unidade')
     <h5>{{strtoupper($area->nome)}}</h5>
-    <img src="{{ asset('storage/imagens/'.$subareas->imagem)}}" width="40" height="40" >
+    <img src="{{ asset('/img/'.$subareas->imagem)}}" width="40" height="40" >
     <h5>{{strtoupper($subareas->nome)}}</h5>
 </div>
 

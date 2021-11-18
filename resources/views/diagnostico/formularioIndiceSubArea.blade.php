@@ -59,7 +59,7 @@ foreach($subareas as $a){
             $count_subareas = $count_subareas + 1; //conta quantas sub áreas já fizeram o diagnóstico para saber se ainda falta algum que não fez
         ?>
             <div class="form-group text-center corFundoGrafico" style="padding: 10px">
-                <img src="{{ asset('storage/imagens/'.$subareas->imagem)}}" width="50" height="50" >
+                <img src="{{ asset('img/'.$subareas->imagem)}}" width="50" height="50" >
                 <h5>{{strtoupper($subareas->nome)}}</h5>
                 <canvas id="{{'myChart'.$subareas->id}}"></canvas>
             </div>
