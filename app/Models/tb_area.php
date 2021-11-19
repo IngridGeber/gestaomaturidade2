@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class tb_area extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'nome'
+    ];
+
+
 }

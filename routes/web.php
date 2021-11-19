@@ -22,11 +22,16 @@ Route::get('logout', [App\Http\Controllers\Auth\LoginController::class,'logout']
 
 Auth::routes();
 
+
+//ROTAS PARA O ADMIN
 Route::middleware(['admin','verified'])->group(function () {
-    Route::get('admin', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('admin/login', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
+    Route::resource('area', App\Http\Controllers\TbAreaController::class);
+
 });
 
+//ROTAS PARA O AVALIADOR
 Route::middleware(['avaliador','verified'])->group(function () {
     Route::get('avaliador', [App\Http\Controllers\HomeController::class, 'indexAvaliador'])->name('homeavaliador');
     Route::post('/diagnostico/exibirPerguntas', [App\Http\Controllers\TbDiagnosticoController::class, 'exibirPerguntas'])->name('exibirPerguntas');
@@ -41,4 +46,6 @@ Route::middleware(['avaliador','verified'])->group(function () {
     Route::post('/diagnostico/resultModeloArea',[App\Http\Controllers\TbDiagnosticoController::class,'resultModeloArea'])->name('resultModeloArea');
 
 });
+
+
 

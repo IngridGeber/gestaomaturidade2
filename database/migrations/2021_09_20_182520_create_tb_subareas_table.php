@@ -14,17 +14,18 @@ class CreateTbSubareasTable extends Migration
     public function up()
     {
         Schema::create('tb_subareas', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('nome', 30);
-            $table->foreignId('id_area_fk');
-            $table->string('imagem');
+            $table->foreign('id_area_fk')->references('id')->on('tb_areas');
+            $table->string('imagem',255);
+            $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
      *
-     * @return void 
+     * @return void
      */
     public function down()
     {

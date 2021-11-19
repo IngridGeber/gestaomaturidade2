@@ -22,7 +22,7 @@
                         <h7>Cadastros</h7>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Áreas</a></li>
+                        <li><a class="dropdown-item" href="{{url('area')}}">Áreas</a></li>
                         <li><a class="dropdown-item" href="#">Sub Áreas</a></li>
                         <li><a class="dropdown-item" href="#">Tipo de Unidades</a></li>
                         <li><a class="dropdown-item" href="#">Unidades</a></li>

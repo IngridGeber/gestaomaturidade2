@@ -43,7 +43,6 @@ class LoginController extends Controller
 
     public function logout(Request $request) {
 
-        /*return redirect('/login');*/
 
         $user = User::findOrFail(Auth::user()->id);
 
@@ -51,7 +50,7 @@ class LoginController extends Controller
 
         if ($user->id_permissao_fk == 1){
 
-            return redirect('/admin');
+            return redirect('/admin/login');
 
         }
         else {
