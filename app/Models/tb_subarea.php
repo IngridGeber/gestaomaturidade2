@@ -9,7 +9,11 @@ class tb_subarea extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'nome','id_area_fk','imagem'
+    ];
+
     public function  relArea(){
-        return $this->hasOne('App\Models\tb_areas','id','id_area_fk');
+        return $this->hasOne('App\Models\tb_area','id','id_area_fk');
     }
 }

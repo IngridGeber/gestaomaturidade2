@@ -108,15 +108,17 @@ class TbAreaController extends Controller
     public function destroy($id)
     {
 
+        $area = $this->area->find($id);
+
         try{
             $this->area->destroy($id);
-            return redirect('area')->with('status', 'Área foi excluída!');
+            return redirect('area')->with('status', 'Área ' .$area->nome. ' foi excluída!');
         }
         catch (\Exception $e){
             if($e->getCode() == 23000 ){
-                return redirect('area')->with('status-not', 'Área '.$this->area->nome.' não foi excluída! A mesma está sendo utilizada em outro cadastro!');
+                return redirect('area')->with('status-not', 'Área '.$area->nome.' não foi excluída! A mesma está sendo utilizada em outro cadastro!');
             }else{
-                return redirect('area')->with('status-not', 'Área '.$this->area->nome.' não foi excluída! A mesma está sendo utilizada em outro cadastro!'.$e->getMessage());
+                return redirect('area')->with('status-not', 'Área '.$area->nome.' não foi excluída! A mesma está sendo utilizada em outro cadastro!'.$e->getMessage());
             }
 
         }

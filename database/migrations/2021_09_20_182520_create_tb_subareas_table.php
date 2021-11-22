@@ -15,7 +15,7 @@ class CreateTbSubareasTable extends Migration
     {
         Schema::create('tb_subareas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nome', 30);
+            $table->string('nome', 50);
             $table->foreign('id_area_fk')->references('id')->on('tb_areas');
             $table->string('imagem',255);
             $table->timestamps();

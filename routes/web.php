@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::get('logout', [App\Http\Controllers\Auth\LoginController::class,'logout']);
@@ -28,6 +28,7 @@ Route::middleware(['admin','verified'])->group(function () {
     Route::get('admin/login', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
     Route::resource('area', App\Http\Controllers\TbAreaController::class);
+    Route::resource('subarea', App\Http\Controllers\TbSubAreaController::class);
 
 });
 
