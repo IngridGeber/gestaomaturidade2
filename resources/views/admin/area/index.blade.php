@@ -34,7 +34,7 @@
                     <td>{{$a->nome}}</td>
                     <td width="20">
                         <a href="{{url("area/$a->id/edit")}}">
-                            <button class="btn btn-primary ">Editar</button>
+                            <button class="btn btn-primary "><i class="fas fa-edit"></i></button>
                         </a>
                     </td>
                     <td width="20">
@@ -42,7 +42,7 @@
                             <form action="{{url("area/$a->id")}}" method="POST" >
                                 @csrf
                                 <input type="hidden" name="_method" value="DELETE">
-                                <button class="btn btn-danger link-delete">Deletar</button>
+                                <button class="btn btn-danger link-delete"><i class="fas fa-trash"></i></button>
                             </form>
                         </a>
                     </td>

@@ -11,41 +11,35 @@
     <div style="margin-left: 12px">
 
         <div class="text-center">
-             <a href="{{url('subarea/create')}}"
+             <a href="{{url('tipounidade/create')}}"
                class="btn btn-success btn-small">
-                <b>Nova Sub Área</b></a>
+                <b>Novo Tipo de Unidade</b></a>
          </div>
 
         <br><br>
 
 
-        <table id="subareas" class="display" style="width:100%">
+        <table id="tipounidades" class="display" style="width:100%">
             <thead>
             <tr>
                 <th>Id</th>
-                <th>Sub Área</th>
-                <th>Área</th>
+                <th>Tipo de Unidade</th>
                 <th class="text-center" colspan="2">Operação</th>
             </tr>
             </thead>
             <tbody>
-            @foreach($subareas as $sub)
+            @foreach($tipounidades as $t)
                 <tr>
-                    <td>{{$sub->id}}</td>
-                    <td>{{$sub->nome}}</td>
-                    @php
-                        $area = $sub->find($sub->id_area_fk)->relArea;
-                    @endphp
-
-                    <td>{{$area->nome}}</td>
+                    <td>{{$t->id}}</td>
+                    <td>{{$t->nome}}</td>
                     <td width="20">
-                        <a href="{{url("subarea/$sub->id/edit")}}">
+                        <a href="{{url("tipounidade/$t->id/edit")}}">
                             <button class="btn btn-primary "><i class="fas fa-edit"></i></button>
                         </a>
                     </td>
                     <td width="20">
                         <a href="" >
-                            <form action="{{url("subarea/$sub->id")}}" method="POST" >
+                            <form action="{{url("tipounidade/$t->id")}}" method="POST" >
                                 @csrf
                                 <input type="hidden" name="_method" value="DELETE">
                                 <button class="btn btn-danger link-delete"><i class="fas fa-trash"></i></button>
@@ -59,7 +53,7 @@
 
         <script type="text/javascript">
             $(document).ready(function() {
-                $('#subareas').DataTable({
+                $('#tipounidades').DataTable({
                     "language": {
                         "url": "https://cdn.datatables.net/plug-ins/1.10.12/i18n/Portuguese-Brasil.json"
                     },

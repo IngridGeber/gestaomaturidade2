@@ -13,7 +13,7 @@ class CreateTbUnidadesTable extends Migration
      */
     public function up()
     {
-        Schema::create('tb_unidade', function (Blueprint $table) {
+        Schema::create('tb_unidades', function (Blueprint $table) {
             $table->id();
             $table->string('nome', 100);
             $table->foreignId('id_tipounidade_fk');

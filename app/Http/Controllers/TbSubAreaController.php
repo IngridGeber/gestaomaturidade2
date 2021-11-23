@@ -71,7 +71,7 @@ class TbSubAreaController extends Controller
         try {
 
             if(!$upload){
-               return back()->with('Falha ao salvar a imagem!');
+               return back()->with('status-not','Falha ao salvar a imagem!');
             }else {
 
                 $this->subarea->save();
@@ -79,7 +79,7 @@ class TbSubAreaController extends Controller
             }
 
         }catch (\Exception $e){
-           return back()->with('Falha ao salvar a imagem!');
+           return back()->with('status-not',$e);
 
         }
 

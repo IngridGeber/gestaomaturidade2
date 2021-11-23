@@ -14,8 +14,9 @@ class CreateTbTipounidadesTable extends Migration
     public function up()
     {
         Schema::create('tb_tipounidades', function (Blueprint $table) {
-            $table->id();
-            $table->string('nome', 50);
+            $table->increments('id');
+            $table->string('nome', 100);
+            $table->timestamps();
         });
     }
 

@@ -29,6 +29,8 @@ Route::middleware(['admin','verified'])->group(function () {
     Route::get('dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
     Route::resource('area', App\Http\Controllers\TbAreaController::class);
     Route::resource('subarea', App\Http\Controllers\TbSubAreaController::class);
+    Route::resource('tipounidade', App\Http\Controllers\TbTipoUnidadeController::class);
+    Route::resource('unidade', App\Http\Controllers\TbUnidadeController::class);
 
 });
 

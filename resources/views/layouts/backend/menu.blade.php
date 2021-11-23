@@ -24,8 +24,8 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a class="dropdown-item" href="{{url('area')}}">Áreas</a></li>
                         <li><a class="dropdown-item" href="{{url('subarea')}}">Sub Áreas</a></li>
-                        <li><a class="dropdown-item" href="#">Tipo de Unidades</a></li>
-                        <li><a class="dropdown-item" href="#">Unidades</a></li>
+                        <li><a class="dropdown-item" href="{{'tipounidade'}}">Tipo de Unidades</a></li>
+                        <li><a class="dropdown-item" href="{{'unidade'}}">Unidades</a></li>
                     </ul>
                 </li>
 
